@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <%- include('../views/partials/head.ejs'); %>
+
+  <!-- <script type = "text/javascript" src="/clips_folders.js"></script> -->
+
+</head>
+
+
+<body class="container" onload="initialize();">
+
+<header>
+  <%- include('../views/partials/header'); %>
+</header>
+
+<main>
+    <form class=""> 
+        <div name="folders" class=" folders me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden" id="folders">
+            <label for="clips_folder"><h3>Clips Folder: </h3></label>
+
+            <select name="clips_folder" id="clips_folder" class="clips_folder" required>
+                <option value="Select one...">Select one...</option>
+
+                
+            </select>
+              
+
+        </div>
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        
+        <div name="scripts" class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left overflow-hidden">
+            <h3>Script: </h3>
+            <div>
+                <textarea id="ML_script" name="ML_script" rows="20" cols="80" class="ratio ratio-1x1">Write your script here...</textarea>
+                <input type="submit" value="playback" class="btn btn-primary">
+            </div>
+
+        </div>
+        <div name="clips" class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden ratio">
+            <h3>Clips: </h3>
+            <video id="video_output" controls>
+                <!-- <source src="/video" type="video/webm" />
+                <source src="/video" type="video/mp4" /> -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+        <div name="labels" class="">
+            <h3>Create labels: </h3>
+            <label for="clip-num">Clip #:</label>
+            <input type="text"> 
+            <label for="clip-time-span">Clip Time Span:</label>
+            <input type="text"> 
+            <label for="clip-lable">Clip label:</label>
+            <input type="text"> 
+            
+        </div>
+
+        <div>
+        <input type="submit" value="Render" class="btn btn-primary">
+    </div>
+    </form>
+
+</main>
+<footer>
+  <%- include('../views/partials/footer'); %>
+</footer>
+
+
+</body>
+</html>
